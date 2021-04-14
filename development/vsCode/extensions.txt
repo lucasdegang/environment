@@ -1,0 +1,11 @@
+# Some extensions to help productivity
+
+Code runner (https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+C/C++ (https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+C# (https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+C# Extensions (https://marketplace.visualstudio.com/items?itemName=jchannon.csharpextensions)
+Live Server (https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+Material Icon Theme (https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+vscode-solution-explorer (https://marketplace.visualstudio.com/items?itemName=fernandoescolar.vscode-solution-explorer)
+HTML CSS Support (https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
+ES7 React (https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
