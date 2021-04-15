@@ -1,0 +1,6 @@
+# Terminal 
+
+> cmd
+> powershell (adm)
+> ubuntu
+> git bash
