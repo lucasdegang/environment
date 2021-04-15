@@ -1,0 +1,17 @@
+# Terminal 
+
+> cmd
+> powershell (adm)
+> ubuntu
+> git bash
+
+
+# Basic commands: 
+
+git help
+git status
+git branch [ -l | -d ]
+git switch [ branch ]
+git add [ items ]
+git commit [-a]
+git push
