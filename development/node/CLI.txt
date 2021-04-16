@@ -1,0 +1,16 @@
+# Intro
+
+# Packages: https://www.npmjs.com/
+
+--- 
+
+# Commands
+
+# Install yarn
+
+npm install -g yarn
+npm i
+npm start
+npm run
+npx create-react-app <project> [--use-npm]
+npm init react-app <my-app>

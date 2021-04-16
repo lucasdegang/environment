@@ -9,6 +9,7 @@
 # Basic commands: 
 
 git help
+git remote update
 git status
 git branch [ -l | -d ]
 git switch [ branch ]
