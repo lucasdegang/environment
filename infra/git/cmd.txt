@@ -16,3 +16,4 @@ git switch [ branch ]
 git add [ items ]
 git commit [-a]
 git push
+git.exe checkout [ branch ] --
