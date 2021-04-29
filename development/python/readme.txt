@@ -2,4 +2,4 @@
 
 # IDE
 
-> Pycharm
+> Pycharm Community
