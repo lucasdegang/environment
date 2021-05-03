@@ -10,3 +10,4 @@ Material Icon Theme (https://marketplace.visualstudio.com/items?itemName=PKief.m
 vscode-solution-explorer (https://marketplace.visualstudio.com/items?itemName=fernandoescolar.vscode-solution-explorer)
 HTML CSS Support (https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
 ES7 React (https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+Python (https://marketplace.visualstudio.com/items?itemName=ms-python.python)
