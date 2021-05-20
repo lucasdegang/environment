@@ -1,13 +1,98 @@
 ### Containers
 
-# terminal
+# List of some good images in https://hub.docker.com/ or https://hub.docker.com/search?q=&type=image: nginx, mongodb, postgres, apache, mcr.microsoft.com/dotnet/aspnet, debian, ubuntu
 
-> Getting started
-docker run -d -p 80:80 docker/getting-started
+# Terminal
 
-> Img Mongo 
-docker pull mongo
+> Image : mongo, debian, ubuntu ...
+docker image pull [image]
 
+> Run command : is responsible for pull of some image, create container and run container from some image(s)
+Obs.: each run command create a new container.
+
+> Run --rm : execute the command and at end the list of ps -a wont show this container.
+docker container run --rm [image] 
+
+> Run -it (interative mode, access to terminal) used in container creation
+docker container run -it [image]
+
+> Run -ai (attached, interative mode) used in container start
+docker container run -ai [image]
+
+> Run port : example port 8080:80, to link the host machine and server
+docker container run -p 8080:80 [image]
+
+> Run volume : mapping folder from host to server
+Obs.: example with nginx image in the following command. You can build some web page (project) and use volume to start in server. 
+
+Syntax: docker container run [port] -v [command] [image]
+
+ex1: Static archives
+      - Project>html>.html
+      - Project>js>.js
+      - ....
+	windows:
+		docker container run -p 8080:80 -v C:/Users/lucas.flor/Desktop/curso-docker/ex-volume/html:/usr/share/nginx/html nginx
+
+	linux:
+		docker container run -p 8080:80 -v $(pwd):/usr/share/nginx/html nginx
+
+> Run background -d : daemon, this is of one better benefits of docker. You can follow occurs in log (docker IDE).
+Syntax: docker container run -d [name] [port] [volume] [image]
+
+ex1: Daemon nginx port 8080
+      docker container run -d --name ex-daemon-basic -p 8080:80 -v C:/Users/lucas.flor/Desktop/curso-docker/ex-volume/html:/usr/share/nginx/html nginx
+
+> Create container name : the container name is unique for all containers in machine
+Obs.: * when in terminal mode, on exit, the container die.
+*docker container run --name [containerName] [mode] [image]
+ docker container run --name [containerName] [port] [image]
+*docker contianer run --name [containerName] [mode] [port] [image]
+
+----
+# Docker logs : show all logs of container's life
+docker container logs [containerName]
+
+----
+# Docker inspect : show the structure of your container in json mode
+docker container inspect [containerName]
+
+----
+# Docker Management
+
+> Start cotainer name
+docker container ps
+docker container start [mode] [containerName]
+docker container start [containerName]
+
+> Restart container name
+docker container ps
+docker container restart [name]
+
+> Stop container name
+docker container ps
+docker container stop [name]
+
+----
+# Docker topic
+
+Docker container [something]
+Docker imgage [something]
+Docker volume [something]
+
+----
+# Docker tag : pointer for a specific image
+docker image ls
+docker image tag [image] newImageName
+docker image ls
+----
+# Tips
+> Show all content of the topic. 
+docker [topic] ls [-a]
+docker [topic] ps [-a]
+docker [topic] list [-a]
+docker [topic] --help
+----
 > Container with default port with same name 
 docker run -d -p 27017:27017 --name mongodb mongo -v /data/db:/data/db
 
