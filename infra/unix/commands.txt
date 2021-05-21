@@ -1,0 +1,18 @@
+# UNIX terminal commands
+
+# Copy archive to some directory, syntax : cp origin destiny
+cp /[root]/[project]/[folder]/[folder]/[name_of_archive.extension] /[root]/[project]/[folder]/[folder]/[name_of_archive.extension]
+
+# Move archive to some directory, syntax : mv origin destiny
+
+mv	= mover arquivos
+rm      = remove
+mkdir <pasta> = criação de pastas
+
+# Find by name
+find . -name "name_of_archive.extension"
+
+# Find by name and remove
+find . -name "name_of_archive.extension" -exec rm '{}' \;
+
+
