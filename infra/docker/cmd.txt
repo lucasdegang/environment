@@ -28,6 +28,7 @@ Obs.: example with nginx image in the following command. You can build some web 
 Syntax: docker container run [port] -v [command] [image]
 
 ex1: Static archives
+      - /[root]/[folder]/[file.extension]
       - Project>html>.html
       - Project>js>.js
       - ....
@@ -48,6 +49,13 @@ Obs.: * when in terminal mode, on exit, the container die.
 *docker container run --name [containerName] [mode] [image]
  docker container run --name [containerName] [port] [image]
 *docker contianer run --name [containerName] [mode] [port] [image]
+
+----
+# Docker build image: Dockerfile archive. Create image from Dockerfile archive in your project.
+Syntax: docker image build [-t] [name of this image] [directory/root or . (for terminal from local folder)]
+
+docker image build -t ex-simple-build .
+docker image ls
 
 ----
 # Docker logs : show all logs of container's life
@@ -93,7 +101,34 @@ docker [topic] ps [-a]
 docker [topic] list [-a]
 docker [topic] --help
 ----
-> Container with default port with same name 
+# Dockerfile : each command in Dockerfile is one layer. For production solutions use a specific version of image. 
+
+* Tips : https://docs.docker.com/engine/reference/builder/
+
+*Ex=1
+	// Using image from some version 
+	FROM nginx:latest
+	// Writting some out by html tag for nginx share : in and out '>'
+	RUN echo '<h1>Hello World !</h1>' > /usr/share/nginx/html/index.html
+*Ex=2
+	FROM debian
+
+	// maintenance person or team
+	LABEL maintainer 'Lucas Degang'
+
+	// Argument for AWS for example with name files. This name can be changed.
+	ARG S3_BUCKET=files
+
+	// Environment variable
+	ENV S3_BUCKET=${S3_BUCKET}
+
+*Usage: From cmd root folder, the DOT command has value of current directory where is the Dockerfile, ex.: /activities/[folder]/"Dockerfile" OR "*l"
+docker image build -t [nameImage] .
+docker container run --name[containerName] -p 80:80 [nameImage]
+docker container run -it -v C:\Users\lucas.flor\Desktop\curso-docker\build-dev:/app -p 80:8000 --name python-server ex-build-dev
+
+----
+# Others : Container with default port with same name 
 docker run -d -p 27017:27017 --name mongodb mongo -v /data/db:/data/db
 
 [ part 1 - docker run -d] : Here, we are running the docker container with a detached mode. there are two mode to run docker container. one is detached and another one is interactive mode. Detached mode will run in background whereas interactive mode runs in the foreground(terminal will be active).

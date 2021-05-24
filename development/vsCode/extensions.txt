@@ -11,3 +11,4 @@ vscode-solution-explorer (https://marketplace.visualstudio.com/items?itemName=fe
 HTML CSS Support (https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
 ES7 React (https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 Python (https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+Docker (https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
