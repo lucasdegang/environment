@@ -1,0 +1,2 @@
+# Concepts and tips with visualize and animate the Gitflow
+https://veerasundar.com/blog/gitflow-animated.html
