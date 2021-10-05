@@ -12,8 +12,14 @@ git help
 git remote update
 git status
 git branch [ -l | -d ]
+git checkout [branch]
 git switch [ branch ]
 git add [ items ]
 git commit [-a]
 git push
 git.exe checkout [ branch ] --
+git clone [url]
+git fetch
+git fetch [-p | --prune] 
+	Atualiza as branches ativdas do servidor com o seu local. Caso alguma branch da origin tenha sido excluída, o git fetch nao consegue atualizar.
+

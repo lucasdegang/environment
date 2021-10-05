@@ -42,8 +42,14 @@ services:
 # Insert data 
 > db.[some-DB].insertMany([{'Id': 1}, {'Id': 2}])
 
-# Search Data
+# Search Data by Mongo
 > db.[some-DB].find({}).pretty()
+
+# Search Data by SQL
+> mb.runSQLQuery(`
+         SELECT * FROM [some-db]
+  `).sort({_id:-1})
+    .limit(100)
 
 # Remove Data
 > db.[some-DB].remove({})
