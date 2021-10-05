@@ -22,4 +22,5 @@ find . -name "name_of_archive.extension"
 # Find by name and remove
 find . -name "name_of_archive.extension" -exec rm '{}' \;
 
-
+# Read the content of archive
+cat [archive.extension]

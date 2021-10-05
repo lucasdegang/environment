@@ -44,6 +44,9 @@ Syntax: docker container run -d [name] [port] [volume] [image]
 ex1: Daemon nginx port 8080
       docker container run -d --name ex-daemon-basic -p 8080:80 -v C:/Users/lucas.flor/Desktop/curso-docker/ex-volume/html:/usr/share/nginx/html nginx
 
+> Run --net (network) : search in this file "Docker network"
+docker container run -d --net [network] [image]
+
 > Create container name : the container name is unique for all containers in machine
 Obs.: * when in terminal mode, on exit, the container die.
 *docker container run --name [containerName] [mode] [image]
@@ -64,6 +67,7 @@ docker container logs [containerName]
 ----
 # Docker inspect : show the structure of your container in json mode
 docker container inspect [containerName]
+docker network inspect [network]
 
 ----
 # Docker Management
@@ -87,12 +91,20 @@ docker container stop [name]
 Docker container [something]
 Docker imgage [something]
 Docker volume [something]
+Docker network [something] 
+	* none, bridge (defaut), host (machine config and more exposed)
+	* create --driver [network] [nameNetwork]
 
 ----
 # Docker tag : pointer for a specific image
 docker image ls
 docker image tag [image] newImageName
 docker image ls
+
+----
+# Docker compose create the docker-compose.yml in your project folder and must run terminal from current project
+docker-compose up
+
 ----
 # Tips
 > Show all content of the topic. 
@@ -100,6 +112,9 @@ docker [topic] ls [-a]
 docker [topic] ps [-a]
 docker [topic] list [-a]
 docker [topic] --help
+
+> (microservice) : one container for each ms
+
 ----
 # Dockerfile : each command in Dockerfile is one layer. For production solutions use a specific version of image. 
 

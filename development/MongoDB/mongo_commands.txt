@@ -1,0 +1,55 @@
+### Docker compose : archive [folder]/docker-compose.yaml, from terminal folder execute "docker-compose up"
+
+"
+version: '3.7'
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: teste1234
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    depends_on:
+      - mongo
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: teste1234
+"
+
+### Mongo : In CLI(docker) type [mongo]
+> use admin
+> db.auth("root")
+
+# Create db on mongo
+> use [some-DB]
+
+# Create collection on db
+> db.createCollection("some_coll")
+
+# Show dbs and collections
+> show dbs
+> show collections
+
+# Insert data 
+> db.[some-DB].insertMany([{'Id': 1}, {'Id': 2}])
+
+# Search Data by Mongo
+> db.[some-DB].find({}).pretty()
+
+# Search Data by SQL
+> mb.runSQLQuery(`
+         SELECT * FROM [some-db]
+  `).sort({_id:-1})
+    .limit(100)
+
+# Remove Data
+> db.[some-DB].remove({})

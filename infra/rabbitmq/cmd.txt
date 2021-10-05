@@ -1,0 +1,4 @@
+# Dir in root paste docker-compose.yaml : [root]/rabbitmq/data
+
+# CMD from Dir
+docker-compose up
