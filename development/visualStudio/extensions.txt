@@ -1,0 +1,1 @@
+SonarLint for Visual Studio (https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2019)
