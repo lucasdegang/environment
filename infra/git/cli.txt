@@ -23,3 +23,10 @@ git fetch
 git fetch [-p | --prune] 
 	Atualiza as branches ativdas do servidor com o seu local. Caso alguma branch da origin tenha sido excluída, o git fetch nao consegue atualizar.
 
+# Clone, add, commit and push
+git checkout master
+git checkout -b 'nome-da-branch'
+git add . 
+git commit -m 'mensagem qualquer'
+git push --set-upstream origin nome-da-branch
+
