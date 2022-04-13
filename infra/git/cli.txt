@@ -20,13 +20,15 @@ git push
 git.exe checkout [ branch ] --
 git clone [url]
 git fetch
+git merge [branch]
+	Realizar o git merge após atualizar a branch develop, release ou master. Feito isso, retorne a branch de sua implementação git checkout [feature] e realize este comando. 
 git fetch [-p | --prune] 
 	Atualiza as branches ativdas do servidor com o seu local. Caso alguma branch da origin tenha sido excluída, o git fetch nao consegue atualizar.
 
-# Clone, add, commit and push
+# Clone, add, commit, merge and push
 git checkout master
 git checkout -b 'nome-da-branch'
 git add . 
 git commit -m 'mensagem qualquer'
+git merge [develop | release | master]
 git push --set-upstream origin nome-da-branch
-
