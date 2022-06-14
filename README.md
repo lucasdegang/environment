@@ -1,10 +1,9 @@
-<h1 align="center">Environment tips</h1>
+<h1 align="center">env.Tips();</h1>
 
----
-### **Goal**
+### **this._project.Goal();**
 - A little help with command line in a developer day!
 ---
-### **Structure**
+### **env.Structure();**
     root
     |
     |—-- development
@@ -29,12 +28,13 @@
     |--- README.md
     |
 ---
-### **References**
+### **search.References();**
 - https://git-scm.com/docs/git/pt_BR
 - https://www.mongodb.com/docs/manual/introduction/
 - https://docs.docker.com/
 - https://medium.com/
 - udemy courses like (docker, node, etc...)
+- microsoft mvps's
 ---
-### **Contact**
+### **contact.MessageMe();**
 - https://www.linkedin.com/in/lucas-degang/
