@@ -22,5 +22,15 @@ find . -name "name_of_archive.extension"
 # Find by name and remove
 find . -name "name_of_archive.extension" -exec rm '{}' \;
 
-# Read the content of archive
-cat [archive.extension]
+# Read the content of file
+cat [file.extension]
+more [file.extension]
+
+# Admin permission
+sudo su
+
+# Create or edit file. Obs to save press: "esc" and then type: ":wq!" to save. For exit withou save just type: ":q!"
+vi | vim [file-name.extension]
+
+# Print working directory
+pwd

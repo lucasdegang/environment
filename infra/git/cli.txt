@@ -5,30 +5,33 @@
 > ubuntu
 > git bash
 
-
 # Basic commands: 
 
 git help
 git remote update
 git status
-git branch [ -l | -d ]
+git branch [-l | -d | -a]
 git checkout [branch]
-git switch [ branch ]
-git add [ items ]
+git switch [branch]
+git add [items | . ]
 git commit [-a]
-git push
-git.exe checkout [ branch ] --
-git clone [url]
 git fetch
+git pull
+git push
+git push origin master
+	The origin represents a remote name where the user wants to push the changes.
+git.exe checkout [branch] --
+git clone [url]
 git merge [branch]
 	Realizar o git merge após atualizar a branch develop, release ou master. Feito isso, retorne a branch de sua implementação git checkout [feature] e realize este comando. 
-git fetch [-p | --prune] 
+git fetch [-p | --prune]
 	Atualiza as branches ativdas do servidor com o seu local. Caso alguma branch da origin tenha sido excluída, o git fetch nao consegue atualizar.
 
 # Clone, add, commit, merge and push
 git checkout master
-git checkout -b 'nome-da-branch'
+git checkout -b 'branch-name'
 git add . 
 git commit -m 'mensagem qualquer'
-git merge [develop | release | master]
-git push --set-upstream origin nome-da-branch
+*git merge [develop | release | master]
+	Do not always use this.
+git push --set-upstream origin 'branch-name'
