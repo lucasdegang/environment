@@ -5,7 +5,9 @@
 > ubuntu
 > git bash
 
-# Basic commands: 
+# Tips:
+
+## Basic commands:
 
 git help
 git remote update
@@ -22,16 +24,43 @@ git push origin master
 	The origin represents a remote name where the user wants to push the changes.
 git.exe checkout [branch] --
 git clone [url]
-git merge [branch]
-	Realizar o git merge após atualizar a branch develop, release ou master. Feito isso, retorne a branch de sua implementação git checkout [feature] e realize este comando. 
 git fetch [-p | --prune]
-	Atualiza as branches ativdas do servidor com o seu local. Caso alguma branch da origin tenha sido excluída, o git fetch nao consegue atualizar.
+	Update from server with local branches (new, deleted ...) Only git fetch cannot do this. 
 
-# Clone, add, commit, merge and push
+## Create branch from master
+
 git checkout master
-git checkout -b 'branch-name'
+git pull
+git checkout -b [branch-name]
 git add . 
-git commit -m 'mensagem qualquer'
-*git merge [develop | release | master]
-	Do not always use this.
-git push --set-upstream origin 'branch-name'
+git commit -m '[UPDATED] message'
+git push --set-upstream origin [branch-name]
+
+## Change commit message
+
+git commit --amend
+[change commit message]
+^X 
+Yes
+enter
+
+## Squash commits on your branch
+
+git checkout master
+git pull
+git checkout [your-branch]
+git pull
+git reset $(git merge-base master $(git branch --show-current))
+git add -A
+git commit -m '[SQUASH] message'
+git push --force origin [your-branch]
+
+## Rebase with master
+
+git checkout master
+git pull
+git checkout [your-branch]
+git pull
+git rebase origin/master
+git rebase [--continue | --skip | --abort | --edit-todo | --quit]
+git push --force-with-lease origin [your-branch]

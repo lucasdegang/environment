@@ -3,10 +3,13 @@
 ### **this._project.Goal();**
 - A little help with command line in a developer day!
 ---
+### **env.Tips();**
+- In Github and Azure DevOps the "merge" is called Pull Requests. In Gitlab is called Merge Requests.
+---
 ### **env.Structure();**
     root
     |
-    |—-- development
+    |--- development
     |    |--- apacheNetBeans
     |    |--- devC++
     |    |--- SSMS (Microsoft SQL Server Management Studio)
@@ -36,5 +39,5 @@
 - udemy courses like (docker, node, etc...)
 - microsoft mvps's
 ---
-### **contact.MessageMe();**
+### **connect.WithMe();**
 - https://www.linkedin.com/in/lucas-degang/
