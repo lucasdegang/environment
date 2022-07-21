@@ -1,8 +1,0 @@
-# Kubernetes : Operations
-https://kubernetes.io/docs/reference/kubectl/overview/#operations
-
-# CMD or Powershell : help
-kubectl.exe
-kubectl help
-
-# 
