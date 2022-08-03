@@ -64,3 +64,7 @@ git pull
 git rebase origin/master
 git rebase [--continue | --skip | --abort | --edit-todo | --quit]
 git push --force-with-lease origin [your-branch]
+
+## Clear commits from a local branch
+
+git reset --hard HEAD~n
